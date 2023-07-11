@@ -1,0 +1,14 @@
+{
+  "name": "dungeon-fighter",
+  "version": "1.0.0",
+  "description": "JS side scroller game",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "rokas misevicius",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^25.2.0"
+  }
+}
