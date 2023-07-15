@@ -4,7 +4,7 @@
   "description": "JS side scroller game",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "electron ."
   },
   "author": "rokas misevicius",
   "license": "MIT",
