@@ -9,12 +9,27 @@ let canvasHeight = canvas.height;
 // ctx
 const ctx = canvas.getContext("2d");
 
+// sprite
+const sprite = document.createElement("img");
+sprite.src = "./sprite.png";
+
 // player
 let playerPositionX = 0;
 let playerPositionY = 0;
 function drawPlayer() {
   ctx.fillStyle = "red";
-  ctx.fillRect(playerPositionY, playerPositionX, 100, 100);
+  ctx.fillRect(playerPositionY, playerPositionX, 100, 200);
+  ctx.drawImage(
+    sprite,
+    0,
+    0,
+    100,
+    200,
+    playerPositionY,
+    playerPositionX,
+    100,
+    200
+  );
 }
 
 // animate
