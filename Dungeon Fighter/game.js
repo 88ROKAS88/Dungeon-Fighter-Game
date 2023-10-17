@@ -13,6 +13,15 @@ const ctx = canvas.getContext("2d");
 const sprite = document.createElement("img");
 sprite.src = "./sprite.png";
 
+// test animations
+let frame = 0;
+setInterval(() => {
+  frame += 100;
+  if (frame > 200) {
+    frame = 0;
+  }
+}, 1000);
+
 // player
 let playerPositionX = 0;
 let playerPositionY = 0;
@@ -21,7 +30,7 @@ function drawPlayer() {
   ctx.fillRect(playerPositionY, playerPositionX, 100, 200);
   ctx.drawImage(
     sprite,
-    0,
+    frame,
     0,
     100,
     200,
