@@ -14,6 +14,3 @@ window.addEventListener("keydown", (e) => {
   }
   console.log(e.key);
 });
-// test
-console.log(canvasWidth);
-console.log(canvasHeight);
