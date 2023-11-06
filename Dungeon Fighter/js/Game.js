@@ -6,10 +6,10 @@ class Game {
     this.frameInterval = setInterval(() => {
       //   console.log(this.frame);
       this.frame += 100;
-      if (this.frame > 200) {
+      if (this.frame > 300) {
         this.frame = 0;
       }
-    }, 1000);
+    }, 300);
   }
 
   // animate

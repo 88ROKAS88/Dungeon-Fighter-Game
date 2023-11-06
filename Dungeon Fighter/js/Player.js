@@ -2,6 +2,7 @@ class Player {
   constructor(game) {
     this.positionX = 0;
     this.positionY = 0;
+    this.row = 0;
     // this.game = game;
   }
   draw() {
@@ -10,7 +11,7 @@ class Player {
     ctx.drawImage(
       sprite,
       game.frame,
-      0,
+      1 * this.row,
       100,
       200,
       this.positionY,
