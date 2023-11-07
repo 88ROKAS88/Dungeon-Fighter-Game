@@ -10,6 +10,11 @@ class Game {
         this.frame = 0;
       }
     }, 300);
+
+    this.gameTime = setInterval(() => {
+      this.player.positionX += this.player.changeX;
+      this.player.positionY += this.player.changeY;
+    }, 1000 / 30);
   }
 
   // animate

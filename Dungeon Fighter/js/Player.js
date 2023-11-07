@@ -2,6 +2,8 @@ class Player {
   constructor(game) {
     this.positionX = 0;
     this.positionY = 0;
+    this.changeX = 0;
+    this.changeY = 0;
     this.row = 0;
     // this.game = game;
   }
