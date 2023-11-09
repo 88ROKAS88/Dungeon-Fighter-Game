@@ -2,6 +2,7 @@
 const canvas = document.getElementById("canvas");
 const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
+canvas.style.border = "1px solid black";
 // ctx
 const ctx = canvas.getContext("2d");
 // sprite

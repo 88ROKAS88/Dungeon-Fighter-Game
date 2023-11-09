@@ -12,8 +12,14 @@ class Game {
     }, 300);
 
     this.gameTime = setInterval(() => {
-      this.player.positionX += this.player.changeX;
-      this.player.positionY += this.player.changeY;
+      const newPositionX = this.player.positionX + this.player.changeX;
+      const newPositionY = this.player.positionY + this.player.changeY;
+      if (newPositionX > 0 && newPositionX < 300) {
+        this.player.positionX += this.player.changeX;
+      }
+      if (newPositionY > 0 && newPositionY < 700) {
+        this.player.positionY += this.player.changeY;
+      }
     }, 1000 / 30);
   }
 

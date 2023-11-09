@@ -14,7 +14,7 @@ window.addEventListener("keydown", (e) => {
     game.player.changeY = 2;
     game.player.row = 0;
   }
-  console.log("keydown", e.key);
+  // console.log("keydown", e.key);
 });
 
 window.addEventListener("keyup", (e) => {
@@ -38,5 +38,5 @@ window.addEventListener("keyup", (e) => {
   //   game.player.positionY++;
   //   game.player.row = 0;
   // }
-  console.log("keyup", e.key);
+  // console.log("keyup", e.key);
 });
