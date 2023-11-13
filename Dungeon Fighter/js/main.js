@@ -12,4 +12,6 @@ sprite.src = "./sprite.png";
 // start game
 let game = new Game();
 
+game.background.src = "./img/background.png";
+
 game.animate();

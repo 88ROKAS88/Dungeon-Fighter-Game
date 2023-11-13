@@ -1,5 +1,6 @@
 class Game {
   constructor() {
+    this.background = document.createElement("img");
     this.player = new Player(this);
     // test animations
     this.frame = 0;
@@ -23,9 +24,24 @@ class Game {
     }, 1000 / 30);
   }
 
+  backgroundDraw() {
+    ctx.drawImage(
+      this.background, // image
+      0, // image cut from
+      0,
+      800, //image cut to
+      500,
+      0, //canvas
+      0,
+      800,
+      500
+    );
+  }
+
   // animate
   animate() {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    game.backgroundDraw();
     game.player.draw();
     requestAnimationFrame(game.animate);
   }
