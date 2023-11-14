@@ -1,7 +1,9 @@
 class Game {
   constructor() {
     this.background = document.createElement("img");
+    this.backgroundY = 0;
     this.player = new Player(this);
+    this.mapY = 0;
     // test animations
     this.frame = 0;
     this.frameInterval = setInterval(() => {
@@ -19,7 +21,25 @@ class Game {
         this.player.positionX += this.player.changeX;
       }
       if (newPositionY > 0 && newPositionY < 700) {
-        this.player.positionY += this.player.changeY;
+        if (
+          this.player.changeY > 0 &&
+          this.player.positionY > 500 &&
+          this.backgroundY + this.player.changeY < 800
+        ) {
+          this.backgroundY += this.player.changeY;
+          this.mapY += this.player.changeY;
+        } else if (
+          this.player.changeY < 0 &&
+          this.player.positionY < 200 &&
+          this.backgroundY + this.player.changeY > 0
+        ) {
+          this.backgroundY += this.player.changeY;
+          this.mapY += this.player.changeY;
+        } else {
+          this.player.positionY += this.player.changeY;
+          this.mapY += this.player.changeY;
+        }
+        console.log(this.mapY);
       }
     }, 1000 / 30);
   }
@@ -27,7 +47,7 @@ class Game {
   backgroundDraw() {
     ctx.drawImage(
       this.background, // image
-      0, // image cut from
+      this.backgroundY, // image cut from
       0,
       800, //image cut to
       500,
