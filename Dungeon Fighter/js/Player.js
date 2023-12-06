@@ -14,11 +14,11 @@ class Player {
       sprite,
       game.frame,
       1 * this.row,
-      100,
+      200,
       200,
       this.positionY,
       this.positionX,
-      100,
+      200,
       200
     );
   }
