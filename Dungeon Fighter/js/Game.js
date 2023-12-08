@@ -20,7 +20,7 @@ class Game {
       if (newPositionX > 0 && newPositionX < 300) {
         this.player.positionX += this.player.changeX;
       }
-      if (newPositionY > 0 && newPositionY < 700) {
+      if (newPositionY > 0 && newPositionY < 600) {
         if (
           this.player.changeY > 0 &&
           this.player.positionY > 500 &&
