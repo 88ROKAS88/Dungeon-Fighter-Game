@@ -3,6 +3,7 @@ class Game {
     this.background = document.createElement("img");
     this.backgroundY = 0;
     this.player = new Player(this);
+    this.enemy = new Enemy(this, 400, 500);
     this.mapY = 0;
     // test animations
     this.frame = 0;
@@ -63,6 +64,7 @@ class Game {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     game.backgroundDraw();
     game.player.draw();
+    game.enemy.draw();
     requestAnimationFrame(game.animate);
   }
 }
