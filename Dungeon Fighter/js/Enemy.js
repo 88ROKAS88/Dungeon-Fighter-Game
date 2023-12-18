@@ -1,15 +1,17 @@
 class Enemy {
-  constructor(game, positionX, positionY) {
+  constructor(game, positionX, mapY) {
     this.positionX = positionX;
-    this.positionY = positionY;
+    // this.positionY = positionY;
     this.changeX = 0;
     this.changeY = 0;
     this.row = 0;
+
+    this.mapY = mapY;
     // this.game = game;
   }
   draw() {
     ctx.fillStyle = "red";
-    ctx.fillRect(this.positionY, this.positionX, 100, 100);
+    ctx.fillRect(this.mapY - game.screen, this.positionX, 100, 100);
     //   ctx.drawImage(
     //     sprite,
     //     game.frame,

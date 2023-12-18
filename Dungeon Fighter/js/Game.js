@@ -3,8 +3,9 @@ class Game {
     this.background = document.createElement("img");
     this.backgroundY = 0;
     this.player = new Player(this);
-    this.enemy = new Enemy(this, 400, 500);
+    this.enemy = new Enemy(this, 400, 1000);
     this.mapY = 0;
+    this.screen = 0;
     // test animations
     this.frame = 0;
     this.frameInterval = setInterval(() => {
@@ -29,6 +30,7 @@ class Game {
         ) {
           this.backgroundY += this.player.changeY;
           this.mapY += this.player.changeY;
+          this.screen += this.player.changeY;
         } else if (
           this.player.changeY < 0 &&
           this.player.positionY < 200 &&
@@ -36,6 +38,7 @@ class Game {
         ) {
           this.backgroundY += this.player.changeY;
           this.mapY += this.player.changeY;
+          this.screen += this.player.changeY;
         } else {
           this.player.positionY += this.player.changeY;
           this.mapY += this.player.changeY;
