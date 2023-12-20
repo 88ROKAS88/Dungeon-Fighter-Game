@@ -3,7 +3,8 @@ class Game {
     this.background = document.createElement("img");
     this.backgroundY = 0;
     this.player = new Player(this);
-    this.enemy = new Enemy(this, 400, 1000);
+    // this.enemy = new Enemy(this, 400, 1000);
+    this.enemies = [new Enemy(this, 400, 1000), new Enemy(this, 200, 700)];
     this.mapY = 0;
     this.screen = 0;
     // test animations
@@ -66,8 +67,15 @@ class Game {
   animate() {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     game.backgroundDraw();
-    game.player.draw();
-    game.enemy.draw();
+
+    if (game.enemies.length > 0) {
+      game.enemies.forEach((element) => {
+        element.draw();
+      });
+
+      game.player.draw();
+    }
+    // game.enemy.draw();
     requestAnimationFrame(game.animate);
   }
 }
