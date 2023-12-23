@@ -22,4 +22,31 @@ class Player {
       200
     );
   }
+
+  attack() {
+    let playerCenterX = this.positionX + 100;
+    let playerCenterY = game.mapY + 100;
+    if (game.enemies.length > 0) {
+      game.enemies.forEach((element, index) => {
+        let enemyCenterX = element.positionX + 50;
+        let enemyCenterY = element.mapY + 50;
+        if (
+          playerCenterX - enemyCenterX < 150 &&
+          playerCenterX - enemyCenterX > -150 &&
+          playerCenterY - enemyCenterY < 150 &&
+          playerCenterY - enemyCenterY > -150
+        ) {
+          console.log("ENEMY " + index + " TAKES DAMAGE");
+        }
+        console.log(
+          "ENEMY " +
+            index +
+            " playerY " +
+            playerCenterY +
+            " enemyY " +
+            enemyCenterY
+        );
+      });
+    }
+  }
 }

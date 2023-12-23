@@ -17,6 +17,7 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
+  // console.log(e.key);
   if (e.key == "ArrowUp") {
     game.player.changeX += 2;
   }
@@ -28,5 +29,9 @@ window.addEventListener("keyup", (e) => {
   }
   if (e.key == "ArrowRight") {
     game.player.changeY += -2;
+  }
+
+  if (e.key == " ") {
+    game.player.attack();
   }
 });
