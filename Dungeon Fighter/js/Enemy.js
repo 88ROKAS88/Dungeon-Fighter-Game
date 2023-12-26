@@ -8,6 +8,8 @@ class Enemy {
 
     this.mapY = mapY;
     // this.game = game;
+
+    this.health = 100;
   }
   draw() {
     ctx.fillStyle = "red";
