@@ -72,9 +72,8 @@ class Game {
       game.enemies.forEach((element) => {
         element.draw();
       });
-
-      game.player.draw();
     }
+    game.player.draw();
     // game.enemy.draw();
     requestAnimationFrame(game.animate);
   }
